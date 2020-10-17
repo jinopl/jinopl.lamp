@@ -2,6 +2,8 @@
 
 **Development ready LAMP docker setup**
 
+![Docker](https://github.com/jinopl/jinopl.lamp/workflows/Docker/badge.svg)
+
  - Clone this project and put project files in src folder.
  - For first time Run `make firstrun`
  - For running project afterwards `make run`
