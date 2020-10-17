@@ -10,6 +10,11 @@ msg(){
 
 
 #start mysql
+mkdir -p /var/run/mysqld/
+touch /var/run/mysqld/mysqld.sock
+touch /var/run/mysqld/mysqld.pid
+chmod -R 644 /var/run/mysqld/mysqld.sock
+chown -R mysql:mysql /var/lib/mysql /var/run/mysqld
 service mysql start 2>/dev/null
 #create user
 mysql -e "GRANT ALL ON *.* TO 'admin'@'localhost' IDENTIFIED BY 'qwerty123#' WITH GRANT OPTION;"
